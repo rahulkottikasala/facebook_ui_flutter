@@ -1,8 +1,11 @@
-import 'package:facebook_ui/sections/headerButton.dart';
+import 'package:facebook_ui/assets.dart';
+import 'package:facebook_ui/sections/buttonSection.dart';
 import 'package:facebook_ui/sections/roomSection.dart';
 import 'package:facebook_ui/sections/statusSection.dart';
 import 'package:facebook_ui/sections/storySection.dart';
+import 'package:facebook_ui/widgets/boxyButton.dart';
 import 'package:facebook_ui/widgets/circularButton.dart';
+import 'package:facebook_ui/widgets/postCard.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -46,12 +49,39 @@ class Home extends StatelessWidget {
           children: [
             StatusSection(),
             thinDivider,
-            HeaderButtonSection(),
+            ButtonSection(
+              buttonOne: boxyButton(
+                  buttonText: "Live",
+                  buttonIcon: Icons.video_call,
+                  buttonAction: () {},
+                  color: Colors.red),
+              buttonTwo: boxyButton(
+                  buttonText: "Photo",
+                  buttonIcon: Icons.photo_library,
+                  buttonAction: () {},
+                  color: Colors.green),
+              buttonThree: boxyButton(
+                  buttonText: "Room",
+                  buttonIcon: Icons.video_call,
+                  buttonAction: () {},
+                  color: Colors.purple),
+            ),
             thickDivider,
             RoomSection(),
             thickDivider,
             StorySection(),
             thickDivider,
+            PostCard(
+              avatar: mohanlal,
+              name: "Mohan Lal",
+              publishedAt: "10h",
+              postTitle: "Hi, How Are You",
+              postImage: post3,
+              likeCount: "10K",
+              shareCount: "1K",
+              commentCount: "2K",
+              showBlueTick: true,
+            )
           ],
         ),
       ),
