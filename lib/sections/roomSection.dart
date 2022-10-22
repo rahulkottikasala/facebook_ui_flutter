@@ -16,15 +16,27 @@ class RoomSection extends StatelessWidget {
         children: [
           createRoomButton(),
           Avatar(
-            displayImage: amal,
+            displayImage: messi,
             displayStatus: true,
           ),
           Avatar(
-            displayImage: gokul,
+            displayImage: sachin,
             displayStatus: true,
           ),
           Avatar(
             displayImage: sunny,
+            displayStatus: true,
+          ),
+          Avatar(
+            displayImage: cr,
+            displayStatus: true,
+          ),
+          Avatar(
+            displayImage: dq,
+            displayStatus: true,
+          ),
+          Avatar(
+            displayImage: kallyani,
             displayStatus: true,
           ),
           Avatar(

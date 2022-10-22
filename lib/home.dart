@@ -1,5 +1,6 @@
 import 'package:facebook_ui/assets.dart';
 import 'package:facebook_ui/sections/buttonSection.dart';
+import 'package:facebook_ui/sections/postSection.dart';
 import 'package:facebook_ui/sections/roomSection.dart';
 import 'package:facebook_ui/sections/statusSection.dart';
 import 'package:facebook_ui/sections/storySection.dart';
@@ -49,6 +50,7 @@ class Home extends StatelessWidget {
           children: [
             StatusSection(),
             thinDivider,
+            //Home Button
             ButtonSection(
               buttonOne: boxyButton(
                   buttonText: "Live",
@@ -71,17 +73,7 @@ class Home extends StatelessWidget {
             thickDivider,
             StorySection(),
             thickDivider,
-            PostCard(
-              avatar: mohanlal,
-              name: "Mohan Lal",
-              publishedAt: "10h",
-              postTitle: "Hi, How Are You",
-              postImage: post3,
-              likeCount: "10K",
-              shareCount: "1K",
-              commentCount: "2K",
-              showBlueTick: true,
-            )
+            PostSection(),
           ],
         ),
       ),

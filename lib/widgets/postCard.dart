@@ -54,6 +54,7 @@ class PostCard extends StatelessWidget {
               buttonAction: () {},
               color: Colors.grey.shade700),
         ),
+      
       ]),
     );
   }
@@ -104,16 +105,17 @@ class PostCard extends StatelessWidget {
 
 //Title section
   Widget titleSection() {
-   return  postTitle != null && postTitle != "" ?
-    Container(
-      padding: EdgeInsets.only(
-        bottom: 5,
-      ),
-      child: Text(
-        postTitle != null ? postTitle : "",
-        style: TextStyle(color: Colors.black, fontSize: 16),
-      ),
-    ): SizedBox();
+    return postTitle != null && postTitle != ""
+        ? Container(
+            padding: EdgeInsets.only(
+              bottom: 5,
+            ),
+            child: Text(
+              postTitle != null ? postTitle : "",
+              style: TextStyle(color: Colors.black, fontSize: 16),
+            ),
+          )
+        : SizedBox();
   }
 
 //Image section
